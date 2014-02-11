@@ -1,26 +1,20 @@
 <idea-plugin version="2">
   <id>LiveTemplatePreview</id>
   <name>LiveTemplatePreview</name>
-  <version>1.0</version>
-  <vendor email="siosio12@gmail.com" url="http://www.yourcompany.com">siosio
-  </vendor>
+  <version>0.2</version>
+  <vendor
+      email="siosio12@gmail.com"
+      url="https://github.com/siosio/LiveTempletePreview">siosio</vendor>
 
   <description><![CDATA[
-      Live Template image viewer.
+      Live Template preview plugin.
       ]]></description>
 
   <change-notes><![CDATA[
       ]]>
   </change-notes>
 
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Build+Number+Ranges for description -->
-  <idea-version since-build="107.105" />
-
-  <!-- please see http://confluence.jetbrains.net/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
-       on how to target different products -->
-  <!-- uncomment to enable plugin in all products
-  <depends>com.intellij.modules.lang</depends>
-  -->
+  <idea-version since-build="134.1007" />
 
   <application-components>
   </application-components>
@@ -31,6 +25,7 @@
   </actions>
 
   <extensions defaultExtensionNs="com.intellij">
-    <documentationProvider implementation="siosio.LiveTemplateDocumentProvider" order="last" />
+    <documentationProvider implementation="siosio.LiveTemplateDocumentProvider" order="first" />
+    <lang.documentationProvider language="HTML" implementationClass="siosio.LiveTemplateDocumentProvider" order="first" />
   </extensions>
 </idea-plugin>

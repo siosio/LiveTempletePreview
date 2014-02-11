@@ -1,6 +1,7 @@
 package siosio;
 
 import com.intellij.codeInsight.template.impl.LiveTemplateLookupElement;
+import com.intellij.openapi.fileTypes.FileTypes;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
 import com.intellij.psi.PsiFileFactory;
@@ -33,7 +34,8 @@ public class LiveTemplateElement extends FakePsiElement {
 
     @Override
     public PsiFile getContainingFile() {
-        return PsiFileFactory.getInstance(getProject()).createFileFromText("foo.txt", "");
+        return PsiFileFactory.getInstance(getProject()).createFileFromText(
+                "hoge.txt", FileTypes.PLAIN_TEXT, "");
     }
 
     @Override

@@ -1,21 +1,31 @@
 package siosio;
 
+import java.util.List;
+
 import com.intellij.codeInsight.template.impl.LiveTemplateLookupElement;
+import com.intellij.codeInsight.template.impl.LiveTemplateLookupElementImpl;
 import com.intellij.codeInsight.template.impl.TemplateImpl;
 import com.intellij.lang.documentation.AbstractDocumentationProvider;
+import com.intellij.lang.documentation.ExternalDocumentationProvider;
+import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.text.StringUtil;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiManager;
 import org.jetbrains.annotations.Nullable;
 
-public class LiveTemplateDocumentProvider extends AbstractDocumentationProvider {
+public class LiveTemplateDocumentProvider extends AbstractDocumentationProvider implements ExternalDocumentationProvider {
 
+    @Nullable
     @Override
     public PsiElement getDocumentationElementForLookupItem(
             PsiManager psiManager, Object object, PsiElement element) {
-        if (object instanceof LiveTemplateLookupElement
-                && ((LiveTemplateLookupElement) object).getTemplate() != null) {
-            return new LiveTemplateElement(psiManager, (LiveTemplateLookupElement) object);
+        if (!(object instanceof LiveTemplateLookupElementImpl)) {
+            return null;
+        }
+
+        LiveTemplateLookupElementImpl lookupElement = (LiveTemplateLookupElementImpl) object;
+        if (lookupElement.getTemplate() != null) {
+            return new LiveTemplateElement(psiManager, lookupElement);
         }
         return null;
     }
@@ -23,13 +33,11 @@ public class LiveTemplateDocumentProvider extends AbstractDocumentationProvider 
     @Override
     public String generateDoc(PsiElement element,
             @Nullable PsiElement originalElement) {
-
         if (!(element instanceof LiveTemplateElement)) {
             return null;
         }
-
-        LiveTemplateLookupElement liveTemplateLookupElement =
-                ((LiveTemplateElement) element).getElement();
+        LiveTemplateLookupElementImpl liveTemplateLookupElement =
+                (LiveTemplateLookupElementImpl) ((LiveTemplateElement) element).getElement();
         TemplateImpl template = liveTemplateLookupElement.getTemplate();
 
         StringBuilder result = new StringBuilder();
@@ -46,6 +54,22 @@ public class LiveTemplateDocumentProvider extends AbstractDocumentationProvider 
         return result.toString();
     }
 
+    @Nullable
+    public String fetchExternalDocumentation(Project project,
+            PsiElement element, List<String> strings) {
+        return null;
+    }
 
+    public boolean hasDocumentationFor(PsiElement element,
+            PsiElement element2) {
+        return element instanceof LiveTemplateLookupElement;
+    }
+
+    public boolean canPromptToConfigureDocumentation(PsiElement element) {
+        return false;
+    }
+
+    public void promptToConfigureDocumentation(PsiElement element) {
+    }
 }
 
