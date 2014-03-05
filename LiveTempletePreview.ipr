@@ -5,9 +5,6 @@
     <option name="USE_PROJECT_LEVEL_SETTINGS" value="false" />
     <list size="0" />
   </component>
-  <component name="AntConfiguration">
-    <defaultAnt bundledAnt="true" />
-  </component>
   <component name="CCaseConfig">
     <option name="checkoutReserved" value="false" />
     <option name="markExternalChangeAsUpToDate" value="true" />
@@ -62,9 +59,7 @@
       </profile>
     </annotationProcessing>
   </component>
-  <component name="CopyrightManager" default="">
-    <module2copyright />
-  </component>
+  <component name="CopyrightManager" default="" />
   <component name="DBNavigator.Project.ConnectionManager">
     <connections />
   </component>
@@ -398,6 +393,7 @@
         <inspection_tool class="AbsoluteAlignmentInUserInterface" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="AbstractBeanReferencesInspection" enabled="true" level="ERROR" enabled_by_default="true" />
         <inspection_tool class="AbstractClassExtendsConcreteClass" enabled="false" level="WARNING" enabled_by_default="false" />
+        <inspection_tool class="AbstractClassNamingConvention" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="AbstractClassNeverImplemented" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="AbstractClassWithOnlyOneDirectInheritor" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="AbstractClassWithoutAbstractMethods" enabled="false" level="WARNING" enabled_by_default="false" />
@@ -713,6 +709,21 @@
         <inspection_tool class="CastToConcreteClass" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="CastToIncompatibleInterface" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="CaughtExceptionImmediatelyRethrown" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="CdiAlternativeInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiDecoratorInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiDisposerMethodInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiDomBeans" enabled="false" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="CdiInjectInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiInjectionPointsInspection" enabled="false" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="CdiInterceptorInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiManagedBeanInconsistencyInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiNormalScopeInspection" enabled="false" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="CdiObservesInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiSpecializesInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiStereotypeInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiStereotypeRestrictionsInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiTypedAnnotationInspection" enabled="false" level="ERROR" enabled_by_default="true" />
+        <inspection_tool class="CdiUnproxyableBeanTypesInspection" enabled="false" level="ERROR" enabled_by_default="true" />
         <inspection_tool class="CfmlFileReference" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="CfmlReferenceInspection" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="ChainedEquality" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -1029,6 +1040,7 @@
         <inspection_tool class="DuplicateThrows" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="DuplicatedBeanNamesInspection" enabled="true" level="ERROR" enabled_by_default="true" />
         <inspection_tool class="DuplicatedBlockNamesInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+        <inspection_tool class="Duplicates" enabled="false" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="DynamicRegexReplaceableByCompiledPattern" enabled="true" level="WARNING" enabled_by_default="true">
           <scope name="Tests" level="WARNING" enabled="false" />
         </inspection_tool>
@@ -1494,6 +1506,7 @@
         <inspection_tool class="ImplicitCallToSuper" enabled="false" level="WARNING" enabled_by_default="false">
           <option name="m_ignoreForObjectSubclasses" value="false" />
         </inspection_tool>
+        <inspection_tool class="ImplicitDefaultCharsetUsage" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="ImplicitNumericConversion" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="ignoreWideningConversions" value="false" />
           <option name="ignoreCharConversions" value="false" />
@@ -1575,6 +1588,7 @@
         </inspection_tool>
         <inspection_tool class="IntentionDescriptionNotFoundInspection" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="InterceptionAnnotationWithoutRuntimeRetention" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="InterfaceMayBeAnnotatedFunctional" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="InterfaceNamingConvention" enabled="false" level="WARNING" enabled_by_default="false">
           <option name="m_regex" value="[A-Z][A-Za-z\d]*" />
           <option name="m_minLength" value="8" />
@@ -1879,10 +1893,7 @@
         <inspection_tool class="MavenModelInspection" enabled="true" level="ERROR" enabled_by_default="true" />
         <inspection_tool class="MavenRedundantGroupId" enabled="false" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="MethodCallInLoopCondition" enabled="false" level="WARNING" enabled_by_default="false" />
-        <inspection_tool class="MethodCanBeVariableArityMethod" enabled="false" level="WARNING" enabled_by_default="false">
-          <option name="ignoreByteAndShortArrayParameters" value="false" />
-          <option name="ignoreOverridingMethods" value="false" />
-        </inspection_tool>
+        <inspection_tool class="MethodCanBeVariableArityMethod" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="MethodCount" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="m_limit" value="20" />
           <option name="ignoreGettersAndSetters" value="false" />
@@ -2643,6 +2654,7 @@
         <inspection_tool class="SpringIntegrationModel" enabled="false" level="ERROR" enabled_by_default="false" />
         <inspection_tool class="SpringIntegrationModelErrorInspection" enabled="false" level="ERROR" enabled_by_default="false" />
         <inspection_tool class="SpringIntegrationModelInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+        <inspection_tool class="SpringJavaAutowiredMembersInspection" enabled="false" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="SpringJavaAutowiringInspection" enabled="true" level="ERROR" enabled_by_default="true" />
         <inspection_tool class="SpringJavaConfigExternalBeansErrorInspection" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="SpringJavaConfigInconsistencyInspection" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -2680,6 +2692,7 @@
         <inspection_tool class="SqlIdentifierInspection" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="SqlInsertValuesInspection" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="SqlNoDataSourceInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+        <inspection_tool class="SqlNullComparisonInspection" enabled="false" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="SqlPostgresqlSelectFromProcedureInspection" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="SqlResolveInspection" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="SqlShouldBeInGroupByInspection" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -3179,6 +3192,11 @@
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />
   </component>
+  <component name="Jenkins.Application.Settings">
+    <option name="rssSettings">
+      <RssSettings />
+    </option>
+  </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
@@ -3312,7 +3330,7 @@
       <module fileurl="file://$PROJECT_DIR$/LiveTempletePreview.iml" filepath="$PROJECT_DIR$/LiveTempletePreview.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA IU-123.155" project-jdk-type="IDEA JDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA IU-133.696" project-jdk-type="IDEA JDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="Regex">
