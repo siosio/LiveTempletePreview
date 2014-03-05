@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>LiveTemplatePreview</id>
   <name>LiveTemplatePreview</name>
-  <version>0.3</version>
+  <version>0.2</version>
   <vendor
       email="siosio12@gmail.com"
       url="https://github.com/siosio/LiveTempletePreview">siosio</vendor>
