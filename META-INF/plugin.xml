@@ -1,7 +1,7 @@
 <idea-plugin version="2">
   <id>LiveTemplatePreview</id>
   <name>LiveTemplatePreview</name>
-  <version>0.2</version>
+  <version>0.3</version>
   <vendor
       email="siosio12@gmail.com"
       url="https://github.com/siosio/LiveTempletePreview">siosio</vendor>
@@ -15,6 +15,7 @@
   </change-notes>
 
   <idea-version since-build="134.1007" />
+  <depends>com.intellij.modules.lang</depends>
 
   <application-components>
   </application-components>

@@ -1933,10 +1933,7 @@
         <inspection_tool class="MavenModelInspection" enabled="true" level="ERROR" enabled_by_default="true" />
         <inspection_tool class="MavenRedundantGroupId" enabled="false" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="MethodCallInLoopCondition" enabled="false" level="WARNING" enabled_by_default="false" />
-        <inspection_tool class="MethodCanBeVariableArityMethod" enabled="false" level="WARNING" enabled_by_default="false">
-          <option name="ignoreByteAndShortArrayParameters" value="false" />
-          <option name="ignoreOverridingMethods" value="false" />
-        </inspection_tool>
+        <inspection_tool class="MethodCanBeVariableArityMethod" enabled="false" level="WARNING" enabled_by_default="false" />
         <inspection_tool class="MethodCount" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="m_limit" value="20" />
           <option name="ignoreGettersAndSetters" value="false" />
@@ -1998,7 +1995,10 @@
           <option name="useSingleLineReferences" value="true" />
         </inspection_tool>
         <inspection_tool class="MissingMnemonic" enabled="true" level="WARNING" enabled_by_default="true" />
-        <inspection_tool class="MissingOverrideAnnotation" enabled="false" level="WARNING" enabled_by_default="false" />
+        <inspection_tool class="MissingOverrideAnnotation" enabled="false" level="WARNING" enabled_by_default="false">
+          <option name="ignoreObjectMethods" value="true" />
+          <option name="ignoreAnonymousClassMethods" value="false" />
+        </inspection_tool>
         <inspection_tool class="MissingPackageInfo" enabled="true" level="WARNING" enabled_by_default="true" />
         <inspection_tool class="MissortedModifiers" enabled="true" level="WARNING" enabled_by_default="true">
           <option name="m_requireAnnotationsFirst" value="true" />
@@ -3251,6 +3251,11 @@
     <option name="LOCALE" />
     <option name="OPEN_IN_BROWSER" value="true" />
   </component>
+  <component name="Jenkins.Application.Settings">
+    <option name="rssSettings">
+      <RssSettings />
+    </option>
+  </component>
   <component name="ModuleEditorState">
     <option name="LAST_EDITED_MODULE_NAME" />
     <option name="LAST_EDITED_TAB_NAME" />
@@ -3384,7 +3389,7 @@
       <module fileurl="file://$PROJECT_DIR$/LiveTempletePreview.iml" filepath="$PROJECT_DIR$/LiveTempletePreview.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA IU-134.1007 (1)" project-jdk-type="IDEA JDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_5" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA IU-134.1007" project-jdk-type="IDEA JDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="Regex">
