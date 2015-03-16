@@ -27,7 +27,7 @@ It is possible to open the Quick Documentation, templates can be checked.
 For example, as shown in the following image.
 ``
 
-<image src="./images/help.png" />
+<img src="./images/help.png" />
 
 Plugin Download page
 -----------------------
