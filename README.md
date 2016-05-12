@@ -14,7 +14,7 @@ How to use
 Control + J(Mac:command + j) or menu -> Code -> Insert Live Template
 ``
 
-2.Select the desired template. 
+2.Select template.
   
 3.Open Quick Documentation.
 
@@ -23,7 +23,7 @@ Control + Q(Mac:F1)
 ``
 
 ``
-It is possible to open the Quick Documentation, templates can be checked.
+In Quick Documentation, I can preview the information of the template.
 For example, as shown in the following image.
 ``
 
